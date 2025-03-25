@@ -44,6 +44,18 @@ app.get("/posts",(req,res)=>{
 })
 
 
+app.get("/posts/new",(req,res)=>{
+  res.render("new.ejs")
+})
+
+app.post("/posts",(req,res)=>{
+  let {username , content }=req.body;
+  posts.push({username, content})
+  redirect
+ 
+  
+})
+
 
 
 
